@@ -7,7 +7,7 @@ import authRoutes from "./routes/authRoute.js";
 import connectDB from "./config/db.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
-import  Path  from "path";
+import  path  from "path";
 import {fileURLToPath} from "url"
 
 
@@ -57,7 +57,7 @@ app.use('*',function(req,res){
 const PORT = process.env.PORT || 8080;
 
 //run listen
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log(
     `Server Running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgCyan
       .white
