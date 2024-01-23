@@ -8,7 +8,7 @@ import connectDB from "./config/db.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import  Path  from "path";
-
+import {fileURLToPath} from "url"
 
 
 //configure env
@@ -16,7 +16,10 @@ dotenv.config();
 
 //databse config
 connectDB();
+//esModule
 
+const __filename=fileURLToPath(import.meta.url);
+const __dirname=path.__dirname(__filename)
 //rest object
 const app = express();
 
